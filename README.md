@@ -1,1 +1,0 @@
-# terraform_vpc_ec2_sg_aksh
