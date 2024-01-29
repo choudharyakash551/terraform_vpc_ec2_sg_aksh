@@ -12,7 +12,3 @@ module "ec2-instance-private" {
   subnet_id =  element(module.vpc.private_subnets, tonumber(each.key))
   tags = local.common_tags
 }
-  
-
-
-

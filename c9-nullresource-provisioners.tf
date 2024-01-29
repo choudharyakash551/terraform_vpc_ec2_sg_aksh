@@ -3,7 +3,7 @@ resource "null_resource" "name" {
   # Connection Block for Provisioners to connect to EC2 Instance
   connection {
     type     = "ssh"
-    host     = aws_eip.elastic_ip_bestion.public_ip    
+    host     = aws_eip.bastion_eip.public_ip
     user     = "ec2-user"
     password = ""
     private_key = file("private-key/terraform-key.pem")
@@ -25,5 +25,3 @@ provisioner "local-exec" {
    working_dir = "local-exec-output-files/"
   }
 }
-
-
