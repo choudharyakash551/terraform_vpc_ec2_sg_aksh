@@ -6,6 +6,7 @@ module "ec2-instance-private" {
   ami = data.aws_ami.amzlinux2.id
   instance_type          = var.instance_type
   key_name               = var.instance_access_key
+  user_data = file("${path.module}/app1-install.sh")
   #monitoring             = true
   vpc_security_group_ids = [module.security-group-private.security_group_id]
   for_each = toset(["0", "1"])
