@@ -15,7 +15,7 @@ resource "null_resource" "name" {
 
 provisioner "remote-exec" {
    inline = [
-      "sudo chmod 400 /tmp/terraform-key.pem"
+      "sudo chmod 600 /tmp/terraform-key.pem"
     ]
   }
 
